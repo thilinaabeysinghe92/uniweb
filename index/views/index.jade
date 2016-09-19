@@ -1,5 +1,211 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+html
+  head
+    meta(charset='utf-8')
+    |         
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |         
+    script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    |         
+    script(type='text/javascript', src='http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+    |         
+    link(href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    |         
+    link(href='http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css', rel='stylesheet', type='text/css')
+  body
+    .cover
+      .navbar.navstyle
+        .container
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-ex-collapse')
+              span.sr-only Toggle navigation
+              |                             
+              span.icon-bar
+              |                             
+              span.icon-bar
+              |                             
+              span.icon-bar
+            |                         
+            a.navbar-brand(href='#')
+              span Uniweb Course Management System
+          |                     
+          #navbar-ex-collapse.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li.active
+                a(href='#') Home
+              |                             
+              li
+                a(href='#') Contacts
+      |             
+      .cover-image(style="background-image : url('/images/campus.JPG')")
+      |             
+      .container
+        .row
+          .col-md-12.text-center
+            h1.text-inverse UniWeb CourseManagemet
+            |                         
+            p.text-inverse System
+            |                         
+            br
+            |                         
+            br
+            |                         
+            a.btn.btn-lg.btn-primary Signin
+    |         
+    .section
+      .container
+        .row
+          .col-md-12
+            h1.text-primary Notices
+            hr
+        .row
+          .col-md-12
+            ul.media-list
+              li.media
+                a.pull-left(href='#')
+                  img.media-object(src='/images/notice1.jpg', height='64', width='64')
+                .media-body
+                  h4.media-heading.text-danger Media heading
+                  |  
+                  p.text-primary
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              li.media
+                a.pull-left(href='#')
+                  img.media-object(src='/images/notice2.jpg', height='64', width='64')
+                .media-body
+                  h4.media-heading.text-danger Media heading
+                  p.text-primary
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+        .row
+          .col-md-12.text-center
+            ul.pagination.pagination-lg
+              li
+                a(href='#') Prev
+              li
+                a(href='#') 1
+              li
+                a(href='#') 2
+              li
+                a(href='#') 3
+              li
+                a(href='#') 4
+              li
+                a(href='#') 5
+              li
+                a(href='#') Next
+    |         
+    .section
+      .container
+        .row
+          .col-md-6
+            h1.text-primary Contact Academic Affairs
+            form.form-horizontal(role='form')
+              .form-group
+                .col-sm-2
+                  label.control-label(for='inputEmail3') Name
+                .col-sm-10
+                  input#inputEmail3.form-control(type='text', placeholder='Name')
+              .form-group
+                .col-sm-2
+                  label.control-label(for='inputPassword3')
+                    | Subject
+                    br
+                .col-sm-10
+                  input#inputPassword3.form-control(type='text', placeholder='Enter Subject')
+              .form-group
+                .col-sm-2
+                  label.control-label(for='inputPassword3')
+                    | Contact&nbsp;
+                    br
+                .col-sm-10
+                  input#inputPassword3.form-control(type='email', placeholder='Enter email or mobile number')
+              .form-group
+                .col-sm-2
+                  label.control-label(for='inputPassword3')
+                    | Details
+                    br
+                .col-sm-10
+                  input#inputPassword3.form-control(type='text', placeholder='body')
+              .form-group
+                .col-sm-offset-2.col-sm-10
+                  button.btn.btn-block.btn-danger.btn-lg(type='submit') Send
+          .col-md-6
+            h1.text-primary Inquiries
+            form.form-horizontal(role='form')
+              .form-group
+                .col-sm-2
+                  label.control-label(for='inputEmail3') Name
+                .col-sm-10
+                  input#inputEmail3.form-control(type='text', placeholder='Name')
+              .form-group
+                .col-sm-2
+                  label.control-label(for='inputPassword3')
+                    | Subject
+                    br
+                .col-sm-10
+                  input#inputPassword3.form-control(type='text', placeholder='Enter Subject')
+              .form-group
+                .col-sm-2
+                  label.control-label(for='inputPassword3')
+                    | Contact&nbsp;
+                    br
+                .col-sm-10
+                  input#inputPassword3.form-control(type='email', placeholder='Enter email or mobile number')
+              .form-group
+                .col-sm-2
+                  label.control-label(for='inputPassword3')
+                    | Details
+                    br
+                .col-sm-10
+                  input#inputPassword3.form-control(type='text', placeholder='body')
+              .form-group
+                .col-sm-offset-2.col-sm-10
+                  button.btn.btn-block.btn-lg.btn-success(type='submit') Send
+    |         
+    footer.section.section-primary
+      .container
+        .row
+          .col-sm-6
+            h1 Uniweb CourseManagement System
+            |  
+            p All right researced @2016
+          .col-sm-6
+            p.text-info.text-right
+              br
+              br
+            .row
+              .col-md-12.hidden-lg.hidden-md.hidden-sm.text-left
+                a(href='#')
+                  i.fa.fa-3x.fa-fw.fa-instagram.text-inverse
+                |  
+                a(href='#')
+                  i.fa.fa-3x.fa-fw.fa-twitter.text-inverse
+                |  
+                a(href='#')
+                  i.fa.fa-3x.fa-fw.fa-facebook.text-inverse
+                |  
+                a(href='#')
+                  i.fa.fa-3x.fa-fw.fa-github.text-inverse
+            .row
+              .col-md-12.hidden-xs.text-right
+                a(href='#')
+                  i.fa.fa-3x.fa-fw.fa-instagram.text-inverse
+                |  
+                a(href='#')
+                  i.fa.fa-3x.fa-fw.fa-twitter.text-inverse
+                |  
+                a(href='#')
+                  i.fa.fa-3x.fa-fw.fa-facebook.text-inverse
+                |  
+                a(href='#')
+                  i.fa.fa-3x.fa-fw.fa-github.text-inverse
+    .section
+      .container
+        .row
+          .col-md-12
+        |                 
+        .row
+          .col-md-4
+          |                     
+          .col-md-4
+          |                     
+          .col-md-4
